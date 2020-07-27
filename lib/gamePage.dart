@@ -1,6 +1,8 @@
+// 3
 import 'package:flutter/material.dart';
 import 'dart:math';
 
+// create a stateful widget
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
@@ -10,6 +12,7 @@ class _HomePageState extends State<HomePage> {
   int leftButton = Random().nextInt(3) + 1;
   int rightButton = Random().nextInt(3) + 1;
 
+  // create a random value generator function
   void randomvalue() {
     setState(() {
       leftButton = Random().nextInt(3) + 1;
@@ -17,6 +20,7 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
+  // build the logic
   logic() {
     if (leftButton == rightButton) {
       return Text(
@@ -77,6 +81,7 @@ class _HomePageState extends State<HomePage> {
     }
   }
 
+  // create the scaffold
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -141,6 +146,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
+      // create floating button
       floatingActionButton: FloatingActionButton(
         onPressed: () => Navigator.pop(context),
         backgroundColor: Colors.yellow[300],
@@ -149,7 +155,9 @@ class _HomePageState extends State<HomePage> {
           color: Colors.black,
         ),
       ),
+      // set the location of the button
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      // create the bottom navigation bar
       bottomNavigationBar: BottomAppBar(
           color: Colors.red[300],
           shape: CircularNotchedRectangle(),
