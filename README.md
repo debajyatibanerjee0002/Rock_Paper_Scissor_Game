@@ -2,6 +2,8 @@
 
 A new Flutter project.
 
+rules:- rock win over scissors, scissors win over paper and paper win over rock
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
